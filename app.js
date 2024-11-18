@@ -65,12 +65,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/bacheca", (req, res) => {
+  // http://localhost:3000/bacheca
   console.log("Questa è la bacheca");
 
   const response = {
-    results: [],
+    results: [postList],
     count: postListLenght,
   };
+
+  res.json(response);
 });
 
 // qui avvio il mio server e gli dico di rimanere in ascolto sulla porta 3000 del local host
