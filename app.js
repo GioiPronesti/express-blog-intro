@@ -13,6 +13,44 @@ const port = 3000; // questa è la porta per comunicare con il server!
 
 //console.log(app);
 
+//2 array of post)
+const postList = [
+  {
+    title: "Ciambellone",
+    content: content,
+    img: img,
+    strtags: (tags = ["ricetta"]),
+  },
+
+  {
+    title: "Cracker Barbabietola",
+    content: content,
+    img: img,
+    strtags: (tags = ["ricetta"]),
+  },
+
+  {
+    title: "Pane fritto dolce",
+    content: content,
+    img: img,
+    strtags: (tags = ["ricetta"]),
+  },
+
+  {
+    title: "Pasta barbabietola",
+    content: content,
+    img: img,
+    strtags: (tags = ["ricetta"]),
+  },
+
+  {
+    title: "Torta paesana",
+    content: content,
+    img: img,
+    strtags: (tags = ["ricetta"]),
+  },
+];
+
 // 1)
 // definisco la prima rotta di default per accedere al server,
 // qui potrò ricevere le richieste e gestire le risposte
@@ -21,7 +59,7 @@ app.get("/", (req, res) => {
   res.send("Server del mio blog");
 });
 
-// qui avvio il mio server e gli dico di rimanre in ascolto sulla porta 3000 del local host
+// qui avvio il mio server e gli dico di rimanere in ascolto sulla porta 3000 del local host
 app.listen(port, () => {
   console.log("Server in ascolto");
 });
