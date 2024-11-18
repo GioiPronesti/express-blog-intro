@@ -6,3 +6,22 @@
 Testare su postman*/
 
 //console.log("We are in app.js");
+
+const express = require("express"); // importo il framework express nel mio file.js
+const app = express(); // l'applicativo vive dentro questa funzione memorizzato dentro la variabile APP
+const port = 3000; // questa è la porta per comunicare con il server!
+
+//console.log(app);
+
+// 1)
+// definisco la prima rotta di default per accedere al server,
+// qui potrò ricevere le richieste e gestire le risposte
+// con il metodo GET
+app.get("/", (req, res) => {
+  res.send("Server del mio blog");
+});
+
+// qui avvio il mio server e gli dico di rimanre in ascolto sulla porta 3000 del local host
+app.listen(port, () => {
+  console.log("Server in ascolto");
+});
